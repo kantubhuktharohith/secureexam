@@ -439,7 +439,10 @@ export default function HallTicketGeneration() {
             </div>
             <Button
               variant="secondary"
-              onClick={() => window.location.href = "/api/logout"}
+              onClick={async () => {
+                await fetch("/api/auth/logout", { method: "POST" });
+                window.location.href = "/";
+              }}
               data-testid="button-logout"
             >
               <i className="fas fa-sign-out-alt mr-2"></i>Logout

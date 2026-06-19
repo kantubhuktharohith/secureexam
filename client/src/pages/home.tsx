@@ -17,7 +17,7 @@ export default function Home() {
     );
   }
 
-  const isAdmin = user?.role === 'admin';
+  const isAdmin = user?.role === "admin";
 
   return (
     <div className="min-h-screen bg-background">
@@ -50,13 +50,12 @@ export default function Home() {
       <div className="max-w-6xl mx-auto p-6">
         <div className="mb-8">
           <h2 className="text-3xl font-bold text-foreground mb-2">
-            {isAdmin ? 'Admin Dashboard' : 'Student Portal'}
+            {isAdmin ? "Admin Dashboard" : "Student Portal"}
           </h2>
           <p className="text-muted-foreground">
-            {isAdmin 
-              ? 'Manage exams, monitor students, and handle security incidents'
-              : 'Access your exams and view your progress'
-            }
+            {isAdmin
+              ? "Manage exams, monitor students, and handle security incidents"
+              : "Access your exams and view your progress"}
           </p>
         </div>
 
@@ -72,7 +71,8 @@ export default function Home() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground text-sm mb-4">
-                    Create and manage hall tickets with QR codes for student authentication.
+                    Create and manage hall tickets with QR codes for student
+                    authentication.
                   </p>
                   <Link href="/admin/hall-tickets">
                     <Button className="w-full" data-testid="link-hall-tickets">
@@ -91,7 +91,8 @@ export default function Home() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground text-sm mb-4">
-                    Monitor active exams, view statistics, and manage ongoing sessions.
+                    Monitor active exams, view statistics, and manage ongoing
+                    sessions.
                   </p>
                   <Link href="/admin/dashboard">
                     <Button className="w-full" data-testid="link-dashboard">
@@ -129,7 +130,8 @@ export default function Home() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground text-sm mb-4">
-                    Handle security alerts, view snapshots, and manage violations.
+                    Handle security alerts, view snapshots, and manage
+                    violations.
                   </p>
                   <Link href="/admin/incidents">
                     <Button className="w-full" data-testid="link-incidents">
@@ -148,7 +150,8 @@ export default function Home() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground text-sm mb-4">
-                    Create, import, and manage exam questions for all assessments.
+                    Create, import, and manage exam questions for all
+                    assessments.
                   </p>
                   <Link href="/admin/questions">
                     <Button className="w-full" data-testid="link-questions">
@@ -167,7 +170,8 @@ export default function Home() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground text-sm mb-4">
-                    View student performance, analyze scores, and generate reports.
+                    View student performance, analyze scores, and generate
+                    reports.
                   </p>
                   <Link href="/admin/results">
                     <Button className="w-full" data-testid="link-results">

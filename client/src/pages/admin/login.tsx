@@ -3,8 +3,16 @@ import { useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { Alert, AlertDescription } from "@/components/ui/alert";
+import { queryClient } from "@/lib/queryClient";
 
 export default function AdminLogin() {
   const [email, setEmail] = useState("");
@@ -34,6 +42,7 @@ export default function AdminLogin() {
         throw new Error(data.message || "Login failed");
       }
 
+      queryClient.setQueryData(["/api/auth/user"], data.user);
       setLocation("/");
     } catch (err) {
       setError(err instanceof Error ? err.message : "Login failed");
@@ -88,11 +97,7 @@ export default function AdminLogin() {
             </div>
           </CardContent>
           <CardFooter>
-            <Button
-              type="submit"
-              className="w-full"
-              disabled={isLoading}
-            >
+            <Button type="submit" className="w-full" disabled={isLoading}>
               {isLoading ? "Signing in..." : "Sign In"}
             </Button>
           </CardFooter>

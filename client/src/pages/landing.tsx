@@ -10,30 +10,52 @@ export default function Landing() {
       {/* Header */}
       <header className="bg-white shadow-sm sticky top-0 z-50">
         <nav className="max-w-6xl mx-auto flex justify-between items-center px-8 py-4">
-          <a href="/" className="flex items-center gap-2 text-2xl font-bold text-indigo-600 no-underline">
+          <a
+            href="/"
+            className="flex items-center gap-2 text-2xl font-bold text-indigo-600 no-underline"
+          >
             <i className="fas fa-graduation-cap"></i>
             SecureExam
           </a>
-          
+
           {/* Desktop Navigation */}
           <ul className="hidden md:flex items-center gap-8 list-none">
-            <li><a href="#" className="text-slate-600 font-medium hover:text-indigo-600 transition-colors no-underline">Home</a></li>
-            <li><a href="#features" className="text-slate-600 font-medium hover:text-indigo-600 transition-colors no-underline">Features</a></li>
-            <li><a href="#stats" className="text-slate-600 font-medium hover:text-indigo-600 transition-colors no-underline">About</a></li>
-            <li><a href="#contact" className="text-slate-600 font-medium hover:text-indigo-600 transition-colors no-underline">Contact</a></li>
             <li>
-              <Button 
-                variant="outline" 
-                onClick={() => window.location.href = "/admin/login"}
-                className="border-indigo-600 text-indigo-600 hover:bg-indigo-600 hover:text-white"
-                data-testid="button-admin-login"
+              <a
+                href="#"
+                className="text-slate-600 font-medium hover:text-indigo-600 transition-colors no-underline"
               >
-                Admin
-              </Button>
+                Home
+              </a>
             </li>
             <li>
-              <Button 
-                onClick={() => window.location.href = "/student/start"}
+              <a
+                href="#features"
+                className="text-slate-600 font-medium hover:text-indigo-600 transition-colors no-underline"
+              >
+                Features
+              </a>
+            </li>
+            <li>
+              <a
+                href="#stats"
+                className="text-slate-600 font-medium hover:text-indigo-600 transition-colors no-underline"
+              >
+                About
+              </a>
+            </li>
+            <li>
+              <a
+                href="#contact"
+                className="text-slate-600 font-medium hover:text-indigo-600 transition-colors no-underline"
+              >
+                Contact
+              </a>
+            </li>
+
+            <li>
+              <Button
+                onClick={() => (window.location.href = "/student/start")}
                 className="bg-indigo-600 hover:bg-indigo-700 text-white"
                 data-testid="button-student-login"
               >
@@ -43,7 +65,7 @@ export default function Landing() {
           </ul>
 
           {/* Mobile Menu Button */}
-          <button 
+          <button
             className="md:hidden text-slate-600 text-xl"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             data-testid="button-mobile-menu"
@@ -56,20 +78,33 @@ export default function Landing() {
         {mobileMenuOpen && (
           <div className="md:hidden bg-white border-t border-slate-200 px-4 py-4">
             <div className="flex flex-col gap-4">
-              <a href="#" className="text-slate-600 font-medium hover:text-indigo-600 transition-colors no-underline">Home</a>
-              <a href="#features" className="text-slate-600 font-medium hover:text-indigo-600 transition-colors no-underline">Features</a>
-              <a href="#stats" className="text-slate-600 font-medium hover:text-indigo-600 transition-colors no-underline">About</a>
-              <a href="#contact" className="text-slate-600 font-medium hover:text-indigo-600 transition-colors no-underline">Contact</a>
+              <a
+                href="#"
+                className="text-slate-600 font-medium hover:text-indigo-600 transition-colors no-underline"
+              >
+                Home
+              </a>
+              <a
+                href="#features"
+                className="text-slate-600 font-medium hover:text-indigo-600 transition-colors no-underline"
+              >
+                Features
+              </a>
+              <a
+                href="#stats"
+                className="text-slate-600 font-medium hover:text-indigo-600 transition-colors no-underline"
+              >
+                About
+              </a>
+              <a
+                href="#contact"
+                className="text-slate-600 font-medium hover:text-indigo-600 transition-colors no-underline"
+              >
+                Contact
+              </a>
               <div className="flex gap-2">
-                <Button 
-                  variant="outline" 
-                  onClick={() => window.location.href = "/admin/login"}
-                  className="border-indigo-600 text-indigo-600 hover:bg-indigo-600 hover:text-white flex-1"
-                >
-                  Admin
-                </Button>
-                <Button 
-                  onClick={() => window.location.href = "/student/start"}
+                <Button
+                  onClick={() => (window.location.href = "/student/start")}
                   className="bg-indigo-600 hover:bg-indigo-700 text-white flex-1"
                 >
                   Student Login
@@ -87,23 +122,25 @@ export default function Landing() {
             Secure Online Examinations
           </h1>
           <p className="text-xl mb-8 opacity-90 max-w-3xl mx-auto">
-            Advanced AI-powered proctoring system ensuring exam integrity with real-time monitoring and anti-cheating technology
+            Advanced AI-powered proctoring system ensuring exam integrity with
+            real-time monitoring and anti-cheating technology
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button 
-              onClick={() => window.location.href = "/student/start"}
+            <Button
+              onClick={() => (window.location.href = "/student/start")}
               className="bg-white text-indigo-600 hover:bg-gray-100 px-8 py-3 text-lg"
               data-testid="button-start-exam"
             >
               <i className="fas fa-sign-in-alt mr-2"></i>
               Start Exam
             </Button>
-            <Button 
-              variant="outline"
+            <Button
               onClick={() => {
-                document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' });
+                document
+                  .getElementById("features")
+                  ?.scrollIntoView({ behavior: "smooth" });
               }}
-              className="border-white text-white hover:bg-white hover:text-indigo-600 px-8 py-3 text-lg"
+              className="bg-white text-indigo-600 hover:bg-gray-100 px-8 py-3 text-lg"
               data-testid="button-watch-demo"
             >
               <i className="fas fa-play mr-2"></i>
@@ -121,44 +158,54 @@ export default function Landing() {
               Why Choose SecureExam?
             </h2>
             <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-              Comprehensive examination platform with cutting-edge security features
+              Comprehensive examination platform with cutting-edge security
+              features
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
                 icon: "fas fa-video",
                 title: "Live Proctoring",
-                description: "AI-powered real-time monitoring with facial recognition and behavior analysis to detect suspicious activities"
+                description:
+                  "AI-powered real-time monitoring with facial recognition and behavior analysis to detect suspicious activities",
               },
               {
                 icon: "fas fa-shield-alt",
                 title: "Anti-Cheating Technology",
-                description: "Advanced browser lockdown, tab switching detection, and copy-paste prevention mechanisms"
+                description:
+                  "Advanced browser lockdown, tab switching detection, and copy-paste prevention mechanisms",
               },
               {
                 icon: "fas fa-qrcode",
                 title: "Digital Verification",
-                description: "Hall ticket scanning, biometric authentication, and secure student identity verification"
+                description:
+                  "Hall ticket scanning, biometric authentication, and secure student identity verification",
               },
               {
                 icon: "fas fa-chart-line",
                 title: "Analytics Dashboard",
-                description: "Comprehensive reporting with exam analytics, performance metrics, and security incident tracking"
+                description:
+                  "Comprehensive reporting with exam analytics, performance metrics, and security incident tracking",
               },
               {
                 icon: "fas fa-mobile-alt",
                 title: "Multi-Device Support",
-                description: "Seamless experience across desktop, tablet, and mobile devices with responsive design"
+                description:
+                  "Seamless experience across desktop, tablet, and mobile devices with responsive design",
               },
               {
                 icon: "fas fa-cloud",
                 title: "Cloud Infrastructure",
-                description: "Scalable cloud-based platform ensuring 99.9% uptime and secure data storage"
-              }
+                description:
+                  "Scalable cloud-based platform ensuring 99.9% uptime and secure data storage",
+              },
             ].map((feature, index) => (
-              <Card key={index} className="hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+              <Card
+                key={index}
+                className="hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+              >
                 <CardContent className="p-8">
                   <div className="w-16 h-16 bg-gradient-to-br from-indigo-600 to-violet-600 text-white rounded-xl flex items-center justify-center text-2xl mb-6">
                     <i className={feature.icon}></i>
@@ -166,9 +213,7 @@ export default function Landing() {
                   <h3 className="text-xl font-semibold text-slate-800 mb-3">
                     {feature.title}
                   </h3>
-                  <p className="text-slate-600">
-                    {feature.description}
-                  </p>
+                  <p className="text-slate-600">{feature.description}</p>
                 </CardContent>
               </Card>
             ))}
@@ -184,15 +229,13 @@ export default function Landing() {
               { number: "50K+", label: "Students Examined" },
               { number: "500+", label: "Educational Institutes" },
               { number: "99.9%", label: "Uptime Guaranteed" },
-              { number: "24/7", label: "Technical Support" }
+              { number: "24/7", label: "Technical Support" },
             ].map((stat, index) => (
               <div key={index}>
                 <h3 className="text-4xl font-bold text-cyan-400 mb-2">
                   {stat.number}
                 </h3>
-                <p className="text-lg opacity-90">
-                  {stat.label}
-                </p>
+                <p className="text-lg opacity-90">{stat.label}</p>
               </div>
             ))}
           </div>
@@ -206,21 +249,21 @@ export default function Landing() {
             Ready to Secure Your Exams?
           </h2>
           <p className="text-lg mb-8 opacity-90">
-            Join thousands of educational institutions using SecureExam for fraud-free examinations
+            Join thousands of educational institutions using SecureExam for
+            fraud-free examinations
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button 
-              onClick={() => window.location.href = "/api/login?role=student"}
+            <Button
+              onClick={() => (window.location.href = "/student/start")}
               className="bg-white text-indigo-600 hover:bg-gray-100 px-8 py-3 text-lg"
               data-testid="button-get-started"
             >
               <i className="fas fa-rocket mr-2"></i>
               Get Started Now
             </Button>
-            <Button 
-              variant="outline"
-              onClick={() => window.location.href = "/api/login?role=admin"}
-              className="border-white text-white hover:bg-white hover:text-indigo-600 px-8 py-3 text-lg"
+            <Button
+              onClick={() => (window.location.href = "/admin/login")}
+              className="bg-white text-indigo-600 hover:bg-gray-100 px-8 py-3 text-lg"
               data-testid="button-contact-sales"
             >
               <i className="fas fa-phone mr-2"></i>
@@ -237,45 +280,141 @@ export default function Landing() {
             <div>
               <h3 className="text-xl font-semibold mb-4">SecureExam</h3>
               <p className="text-slate-300 mb-4">
-                Leading online examination platform with advanced security and proctoring features.
+                Leading online examination platform with advanced security and
+                proctoring features.
               </p>
               <div className="flex gap-4">
-                <a href="#" className="text-slate-300 hover:text-white text-xl"><i className="fab fa-facebook"></i></a>
-                <a href="#" className="text-slate-300 hover:text-white text-xl"><i className="fab fa-twitter"></i></a>
-                <a href="#" className="text-slate-300 hover:text-white text-xl"><i className="fab fa-linkedin"></i></a>
-                <a href="#" className="text-slate-300 hover:text-white text-xl"><i className="fab fa-youtube"></i></a>
+                <a href="#" className="text-slate-300 hover:text-white text-xl">
+                  <i className="fab fa-facebook"></i>
+                </a>
+                <a href="#" className="text-slate-300 hover:text-white text-xl">
+                  <i className="fab fa-twitter"></i>
+                </a>
+                <a href="#" className="text-slate-300 hover:text-white text-xl">
+                  <i className="fab fa-linkedin"></i>
+                </a>
+                <a href="#" className="text-slate-300 hover:text-white text-xl">
+                  <i className="fab fa-youtube"></i>
+                </a>
               </div>
             </div>
             <div>
               <h3 className="text-xl font-semibold mb-4">Platform</h3>
               <ul className="space-y-2">
-                <li><a href="/api/login?role=student" className="text-slate-300 hover:text-white no-underline">Student Login</a></li>
-                <li><a href="/api/login?role=admin" className="text-slate-300 hover:text-white no-underline">Admin Panel</a></li>
-                <li><a href="#features" className="text-slate-300 hover:text-white no-underline">Features</a></li>
-                <li><a href="#stats" className="text-slate-300 hover:text-white no-underline">About</a></li>
+                <li>
+                  <a
+                    href="/student/start"
+                    className="text-slate-300 hover:text-white no-underline"
+                  >
+                    Student Login
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/admin/login"
+                    className="text-slate-300 hover:text-white no-underline"
+                  >
+                    Admin Panel
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#features"
+                    className="text-slate-300 hover:text-white no-underline"
+                  >
+                    Features
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#stats"
+                    className="text-slate-300 hover:text-white no-underline"
+                  >
+                    About
+                  </a>
+                </li>
               </ul>
             </div>
             <div>
               <h3 className="text-xl font-semibold mb-4">Resources</h3>
               <ul className="space-y-2">
-                <li><a href="#" className="text-slate-300 hover:text-white no-underline">Documentation</a></li>
-                <li><a href="#" className="text-slate-300 hover:text-white no-underline">API Reference</a></li>
-                <li><a href="#" className="text-slate-300 hover:text-white no-underline">System Requirements</a></li>
-                <li><a href="#" className="text-slate-300 hover:text-white no-underline">Security Guide</a></li>
+                <li>
+                  <a
+                    href="#"
+                    className="text-slate-300 hover:text-white no-underline"
+                  >
+                    Documentation
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="text-slate-300 hover:text-white no-underline"
+                  >
+                    API Reference
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="text-slate-300 hover:text-white no-underline"
+                  >
+                    System Requirements
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="text-slate-300 hover:text-white no-underline"
+                  >
+                    Security Guide
+                  </a>
+                </li>
               </ul>
             </div>
             <div>
               <h3 className="text-xl font-semibold mb-4">Support</h3>
               <ul className="space-y-2">
-                <li><a href="#contact" className="text-slate-300 hover:text-white no-underline">Contact Us</a></li>
-                <li><a href="#" className="text-slate-300 hover:text-white no-underline">Help Center</a></li>
-                <li><a href="#" className="text-slate-300 hover:text-white no-underline">Technical Support</a></li>
-                <li><a href="#" className="text-slate-300 hover:text-white no-underline">System Status</a></li>
+                <li>
+                  <a
+                    href="#contact"
+                    className="text-slate-300 hover:text-white no-underline"
+                  >
+                    Contact Us
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="text-slate-300 hover:text-white no-underline"
+                  >
+                    Help Center
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="text-slate-300 hover:text-white no-underline"
+                  >
+                    Technical Support
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="text-slate-300 hover:text-white no-underline"
+                  >
+                    System Status
+                  </a>
+                </li>
               </ul>
             </div>
           </div>
           <div className="border-t border-slate-700 pt-8 text-center text-slate-300">
-            <p>&copy; 2024 SecureExam. All rights reserved. | Privacy Policy | Terms of Service</p>
+            <p>
+              &copy; 2024 SecureExam. All rights reserved. | Privacy Policy |
+              Terms of Service
+            </p>
           </div>
         </div>
       </footer>

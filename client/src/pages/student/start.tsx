@@ -1,5 +1,11 @@
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { useLocation } from "wouter";
 import { QrCode, ShieldCheck, PlayCircle, Scan } from "lucide-react";
 
@@ -22,7 +28,7 @@ export default function StudentStart() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <Card 
+          <Card
             className="hover:shadow-xl transition-all duration-300 cursor-pointer border-2 hover:border-blue-500"
             onClick={() => setLocation("/student/auth")}
             data-testid="card-qr-verification"
@@ -39,7 +45,7 @@ export default function StudentStart() {
               </CardDescription>
             </CardHeader>
             <CardContent>
-              <Button 
+              <Button
                 className="w-full bg-blue-600 hover:bg-blue-700"
                 data-testid="button-qr-verification"
               >
@@ -49,7 +55,7 @@ export default function StudentStart() {
             </CardContent>
           </Card>
 
-          <Card 
+          <Card
             className="hover:shadow-xl transition-all duration-300 cursor-pointer border-2 hover:border-green-500"
             onClick={() => setLocation("/student/id-card-scan")}
             data-testid="card-id-card-scan"
@@ -66,7 +72,7 @@ export default function StudentStart() {
               </CardDescription>
             </CardHeader>
             <CardContent>
-              <Button 
+              <Button
                 className="w-full bg-green-600 hover:bg-green-700"
                 data-testid="button-id-card-scan"
               >
@@ -76,7 +82,7 @@ export default function StudentStart() {
             </CardContent>
           </Card>
 
-          <Card 
+          <Card
             className="hover:shadow-xl transition-all duration-300 cursor-pointer border-2 hover:border-purple-500"
             onClick={() => setLocation("/student/identity-verification")}
             data-testid="card-identity-verification"
@@ -93,7 +99,7 @@ export default function StudentStart() {
               </CardDescription>
             </CardHeader>
             <CardContent>
-              <Button 
+              <Button
                 className="w-full bg-purple-600 hover:bg-purple-700"
                 data-testid="button-identity-verification"
               >
@@ -103,7 +109,7 @@ export default function StudentStart() {
             </CardContent>
           </Card>
 
-          <Card 
+          <Card
             className="hover:shadow-xl transition-all duration-300 cursor-pointer border-2 hover:border-indigo-500"
             onClick={() => setLocation("/student/auth")}
             data-testid="card-start-exam"
@@ -120,7 +126,7 @@ export default function StudentStart() {
               </CardDescription>
             </CardHeader>
             <CardContent>
-              <Button 
+              <Button
                 className="w-full bg-indigo-600 hover:bg-indigo-700"
                 data-testid="button-start-exam"
               >
