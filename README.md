@@ -1,7 +1,7 @@
-# 📘 ExamGuardPro
+# 📘 SecureExam
 
 ## 🔒 Project Description
-**ExamGuardPro** is a secure, AI-powered online examination platform.  
+**SecureExam** is a secure, AI-powered online examination platform.  
 It ensures **fair, authenticated, and reliable online exams** using advanced features such as:
 - AI-based ID verification
 - Hall ticket generation
@@ -43,8 +43,8 @@ This project combines **modern web technologies** and **cloud deployment** to de
 ### A. Run Locally (VS Code)
 1. Clone the repository:
    ```bash
-   git clone https://github.com/MrAlpha00/ExamGuardPro.git
-   cd ExamGuardPro
+   git clone https://github.com/kantubhuktharohith/secureexam.git
+   cd secureexam
    ```
 
 2. Install dependencies:
@@ -108,7 +108,7 @@ This project combines **modern web technologies** and **cloud deployment** to de
 
 ## 📂 Project Structure
 ```
-ExamGuardPro/
+secureexam/
  ├── client/          # React frontend
  ├── server/          # Express backend
  ├── dist/            # Build output
@@ -129,5 +129,5 @@ ExamGuardPro/
 ---
 
 ## 👨‍💻 Author
-Built with ❤️ by **Suhas M**  
-📧 Contact: [admin@secureexam.com](mailto:sm4686771@gmail.com)
+Built with ❤️ by **Rohith**  
+📧 Contact: [admin@secureexam.com](mailto:kantubhuktharohith@gmail.com)
