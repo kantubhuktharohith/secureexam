@@ -118,8 +118,6 @@ secureexam/
  └── .env.example     # Example environment variables
 ```
 
----
-
 ## ✅ Future Enhancements
 - 🔹 Proctoring with webcam monitoring.  
 - 🔹 AI-based cheating detection.  
