@@ -125,7 +125,6 @@ secureexam/
 - 🔹 Analytics dashboard for exam results.  
 
 ---
-
 ## 👨‍💻 Author
 Built with ❤️ by **Rohith**  
 📧 Contact: [admin@secureexam.com](mailto:kantubhuktharohith@gmail.com)
