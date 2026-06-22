@@ -1,4 +1,4 @@
-# 📘 SecureExam
+## 📘 SecureExam
 
 ## 🔒 Project Description
 **SecureExam** is a secure, AI-powered online examination platform.  
@@ -123,7 +123,6 @@ secureexam/
 - 🔹 AI-based cheating detection.  
 - 🔹 Multiple exam formats (MCQ, coding, subjective).  
 - 🔹 Analytics dashboard for exam results.  
-
 ---
 ## 👨‍💻 Author
 Built with ❤️ by **Rohith**  
