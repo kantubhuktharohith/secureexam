@@ -101,7 +101,6 @@ This project combines **modern web technologies** and **cloud deployment** to de
    ```
    https://<your-app-name>.onrender.com
    ```
-
 ---
 
 ## 📂 Project Structure
