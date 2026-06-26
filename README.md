@@ -72,7 +72,6 @@ This project combines **modern web technologies** and **cloud deployment** to de
    ```bash
    npm run db:push -- --force
    ```
-
 5. Start the app:
    ```bash
    npm start
