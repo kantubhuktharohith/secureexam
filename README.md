@@ -1,5 +1,4 @@
 ## 📘 SecureExam
-
 ## 🔒 Project Description
 **SecureExam** is a secure, AI-powered online examination platform.  
 It ensures **fair, authenticated, and reliable online exams** using advanced features such as:
