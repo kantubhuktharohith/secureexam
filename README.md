@@ -59,7 +59,6 @@ This project combines **modern web technologies** and **cloud deployment** to de
    SESSION_SECRET=your-session-secret
    NODE_ENV=development
    ```
-
    🔑 **How to get these values:**
    - `DATABASE_URL` → From **Neon.tech** (create a PostgreSQL instance).  
    - `OPENAI_API_KEY` → From [OpenAI platform](https://platform.openai.com/).  
