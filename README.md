@@ -17,7 +17,6 @@ This project combines **modern web technologies** and **cloud deployment** to de
 - ✅ **Exam Session Management** – Start, stop, and track exams securely.  
 - ✅ **Cloud Database** – Scalable PostgreSQL (NeonDB).  
 - ✅ **Deployment Ready** – Works seamlessly on Render.  
-
 ---
 
 ## 🛠️ Tech Stack
