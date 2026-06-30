@@ -42,7 +42,6 @@ This project combines **modern web technologies** and **cloud deployment** to de
    git clone https://github.com/kantubhuktharohith/secureexam.git
    cd secureexam
    ```
-
 2. Install dependencies:
    ```bash
    npm install --include=dev
