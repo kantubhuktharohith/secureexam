@@ -9,7 +9,6 @@ It ensures **fair, authenticated, and reliable online exams** using advanced fea
 
 This project combines **modern web technologies** and **cloud deployment** to deliver a production-ready exam solution.
 ---
-
 ## 🚀 Features
 - ✅ **Student Management** – Generate hall tickets, store student details.  
 - ✅ **Identity Verification** – AI-powered ID verification with fallback to manual verification.  
