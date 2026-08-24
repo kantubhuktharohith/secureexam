@@ -6,7 +6,6 @@ It ensures **fair, authenticated, and reliable online exams** using advanced fea
 - Hall ticket generation
 - Secure exam session management
 - Real-time monitoring
-
 This project combines **modern web technologies** and **cloud deployment** to deliver a production-ready exam solution.
 ---
 ## 🚀 Features
