@@ -16,7 +16,6 @@ This project combines **modern web technologies** and **cloud deployment** to de
 - ✅ **Cloud Database** – Scalable PostgreSQL (NeonDB).  
 - ✅ **Deployment Ready** – Works seamlessly on Render.  
 ---
-
 ## 🛠️ Tech Stack
 ### **Frontend**
 - React + TypeScript + Vite → Fast, modular, and modern UI.
