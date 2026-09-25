@@ -20,7 +20,6 @@ This project combines **modern web technologies** and **cloud deployment** to de
 ### **Frontend**
 - React + TypeScript + Vite → Fast, modular, and modern UI.
 - TailwindCSS → Clean & responsive design.
-
 ### **Backend**
 - Node.js + Express → Handles API routes.
 - Drizzle ORM + NeonDB (PostgreSQL) → Database management.
