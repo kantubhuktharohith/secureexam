@@ -30,7 +30,6 @@ This project combines **modern web technologies** and **cloud deployment** to de
 ---
 
 ## ⚙️ Installation
-
 ### A. Run Locally (VS Code)
 1. Clone the repository:
    ```bash
