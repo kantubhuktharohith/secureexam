@@ -28,7 +28,6 @@ This project combines **modern web technologies** and **cloud deployment** to de
 ### **AI Integration**
 - OpenAI API → Used for ID card verification.
 ---
-
 ## ⚙️ Installation
 ### A. Run Locally (VS Code)
 1. Clone the repository:
