@@ -10,7 +10,7 @@ var __export = (target, all) => {
     __defProp(target, name, { get: all[name], enumerable: true });
 };
 
-// api/index.ts
+// server/api.ts
 import express from "express";
 import cookieParser from "cookie-parser";
 
@@ -1982,7 +1982,7 @@ async function registerRoutes(app2) {
   return httpServer;
 }
 
-// api/index.ts
+// server/api.ts
 var app = express();
 app.use(express.json({ limit: "50mb" }));
 app.use(express.urlencoded({ limit: "50mb", extended: true }));

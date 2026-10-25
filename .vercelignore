@@ -1,0 +1,5 @@
+# Vercel Ignore file
+.env
+.env.local
+.env.*.local
+server/admin-credentials.json
