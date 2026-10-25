@@ -315,7 +315,7 @@ export default function IncidentManagement() {
                                   {incident.severity}
                                 </Badge>
                               </div>
-                              {incident.metadata && typeof incident.metadata === 'object' && (() => {
+                              {Boolean(incident.metadata) && typeof incident.metadata === 'object' && (() => {
                                 const metadata = incident.metadata as Record<string, any>;
                                 return (
                                   <>

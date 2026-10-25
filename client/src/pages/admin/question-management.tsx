@@ -178,7 +178,7 @@ export default function QuestionManagement() {
       examName: question.examName,
       questionText: question.questionText,
       questionType: question.questionType as "multiple_choice",
-      options: question.options || ["", "", "", ""],
+      options: (question.options as string[]) || ["", "", "", ""],
       correctAnswer: question.correctAnswer,
       difficulty: question.difficulty as "medium",
       subject: question.subject,
@@ -477,6 +477,7 @@ export default function QuestionManagement() {
                           setSelectedQuestion(null);
                           setShowEditModal(false);
                           setFormData({
+                            examName: "",
                             questionText: "",
                             questionType: "multiple_choice",
                             options: ["", "", "", ""],
@@ -560,9 +561,9 @@ export default function QuestionManagement() {
                               </span>
                             </div>
                             <h4 className="font-medium text-sm mb-2">{question.questionText}</h4>
-                            {question.questionType === "multiple_choice" && question.options && (
+                            {question.questionType === "multiple_choice" && Array.isArray(question.options) && (
                               <div className="text-xs text-muted-foreground space-y-1">
-                                {question.options.map((option, index) => (
+                                {(question.options as string[]).map((option: string, index: number) => (
                                   <div key={index} className={`${String.fromCharCode(65 + index) === question.correctAnswer ? 'text-green-600 font-medium' : ''}`}>
                                     {String.fromCharCode(65 + index)}. {option}
                                   </div>

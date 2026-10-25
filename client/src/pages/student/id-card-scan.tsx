@@ -159,8 +159,17 @@ export default function IdCardScan() {
       hallTicketData: hallTicketData
     });
     
-    // Check if barcode matches hall ticket barcode
-    if (hallTicketData && hallTicketData.studentIdBarcode === barcode) {
+    const cleanScanned = (barcode || "").trim();
+    const expectedBarcode = (hallTicketData?.studentIdBarcode || "").trim();
+    const expectedRoll = (hallTicketData?.rollNumber || "").trim();
+
+    const isMatch = Boolean(
+      (expectedBarcode && cleanScanned.toLowerCase() === expectedBarcode.toLowerCase()) ||
+      (expectedRoll && cleanScanned.toLowerCase() === expectedRoll.toLowerCase())
+    );
+
+    // Check if barcode matches hall ticket barcode or roll number
+    if (hallTicketData && isMatch) {
       setVerificationStatus("success");
       toast({
         title: "ID Card Verified",
@@ -173,12 +182,12 @@ export default function IdCardScan() {
       // Navigate to identity verification after 2 seconds
       setTimeout(() => {
         setLocation("/student/identity-verification");
-      }, 2000);
+      }, 1500);
     } else {
       setVerificationStatus("error");
       toast({
         title: "Verification Failed",
-        description: `ID card barcode does not match. Scanned: ${barcode}, Expected: ${hallTicketData?.studentIdBarcode || 'Not set'}`,
+        description: `ID card barcode does not match. Scanned: "${cleanScanned}", Expected: "${expectedBarcode || expectedRoll}"`,
         variant: "destructive",
       });
     }
@@ -228,6 +237,12 @@ export default function IdCardScan() {
               <div className="flex justify-between">
                 <span className="text-gray-600">Exam:</span>
                 <span className="font-medium">{hallTicketData.examName}</span>
+              </div>
+              <div className="flex justify-between items-center pt-1 border-t border-slate-100">
+                <span className="text-gray-600">Registered Barcode:</span>
+                <span className="font-mono text-xs font-semibold bg-indigo-50 text-indigo-700 px-2.5 py-1 rounded-md">
+                  {hallTicketData.studentIdBarcode || hallTicketData.rollNumber}
+                </span>
               </div>
             </div>
           </Card>

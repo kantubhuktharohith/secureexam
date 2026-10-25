@@ -46,7 +46,7 @@ export default function Results() {
         options: Array.isArray(q.options) ? q.options : []
       })) as Question[];
     
-    return generateExamReport(session as any, sessionQuestions);
+    return generateExamReport(session as any, sessionQuestions as any);
   };
 
   const exportResultsPDF = () => {

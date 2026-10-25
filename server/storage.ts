@@ -142,12 +142,14 @@ export class DatabaseStorage implements IStorage {
   }
 
   async getHallTicketByIdAndRoll(hallTicketId: string, rollNumber: string): Promise<HallTicket | undefined> {
+    const cleanId = (hallTicketId || "").trim();
+    const cleanRoll = (rollNumber || "").trim();
     const [ticket] = await db
       .select()
       .from(hallTickets)
       .where(and(
-        eq(hallTickets.hallTicketId, hallTicketId),
-        eq(hallTickets.rollNumber, rollNumber),
+        sql`lower(${hallTickets.hallTicketId}) = lower(${cleanId})`,
+        sql`lower(${hallTickets.rollNumber}) = lower(${cleanRoll})`,
         eq(hallTickets.isActive, true)
       ));
     return ticket;
