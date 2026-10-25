@@ -76,7 +76,7 @@ OPENAI_API_KEY=your-openai-api-key
 1. **Create a new Web Service** on Render
 2. **Connect your Git repository**
 3. **Configure the service:**
-   - **Build Command**: `npm install && npm run db:push`
+   - **Build Command**: `npm run build`
    - **Start Command**: `npm start`
 4. **Add all required environment variables** in the Render dashboard
 5. **Create a PostgreSQL database** (if not using external database)
