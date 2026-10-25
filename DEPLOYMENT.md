@@ -45,6 +45,32 @@ PORT=5000
 OPENAI_API_KEY=your-openai-api-key
 ```
 
+## Vercel Deployment Steps (Recommended)
+
+1. **Push your code to GitHub**:
+   ```bash
+   git add .
+   git commit -m "Configure Vercel deployment"
+   git push
+   ```
+
+2. **Import into Vercel**:
+   - Go to [vercel.com/new](https://vercel.com/new).
+   - Select your repository.
+   - Framework Preset: **Vite** (or Other).
+   - Build Command: `npm run build` *(auto-configured via vercel.json)*
+   - Output Directory: `dist/public` *(auto-configured via vercel.json)*
+
+3. **Add Environment Variables** in Vercel Project Settings:
+   - `DATABASE_URL`: Your cloud PostgreSQL URL (e.g. Neon, Supabase, Render Postgres, etc.)
+   - `JWT_SECRET`: A secure random string
+   - `SESSION_SECRET`: A secure random string
+   - `ADMIN_EMAIL`: Admin login email
+   - `ADMIN_PASSWORD_HASH`: Bcrypt hash of admin password
+   - `NODE_ENV`: `production`
+
+4. **Click Deploy!**
+
 ## Render Deployment Steps
 
 1. **Create a new Web Service** on Render
